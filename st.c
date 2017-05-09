@@ -439,6 +439,7 @@ tlinelen(int y)
 void
 selstart(int col, int row, int snap)
 {
+<<<<<<< HEAD
 	selclear();
 	sel.mode = SEL_EMPTY;
 	sel.type = SEL_REGULAR;
@@ -447,6 +448,10 @@ selstart(int col, int row, int snap)
 	sel.oe.x = sel.ob.x = col;
 	sel.oe.y = sel.ob.y = row;
 	selnormalize();
+=======
+	y -= 0;
+	y /= xw.ch;
+>>>>>>> disable vertical border
 
 	if (sel.snap != 0)
 		sel.mode = SEL_READY;
@@ -2602,3 +2607,4 @@ redraw(void)
 	tfulldirt();
 	draw();
 }
+
